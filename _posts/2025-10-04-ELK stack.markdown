@@ -4,5 +4,66 @@ title:  "Elasticsearch, Logstash, Kibana"
 date:   2025-10-04 20:07:15 -0700
 categories: siem
 ---
-TBD
+
+# Elastic Stack Overview
+
+Evolved from being called **ELK Stack**, due to the inclusion of **Beats**.  
+The **Elastic Stack** can function as a standalone **SIEM** platform or serve as the core technology behind **Security Onion 2**.
+
+---
+
+## Elasticsearch
+
+According to [Elastic](https://www.elastic.co/products/elasticsearch):
+
+    "Elasticsearch is a distributed, RESTful search and analytics engine capable of addressing a growing number of use cases. As the heart of the Elastic Stack, it centrally stores your data for lightning fast search, fine-tuned relevancy, and powerful analytics that scale with ease."
+
+Elasticsearch is designed to efficiently search and analyze petabytes of data at a relatively low cost compared to traditional relational databases.  
+It uses **ES|QL (Elasticsearch Query Language)** — a structured query language built specifically for searching and correlating data within Elastic.
+
+---
+
+## Logstash
+
+**Logstash** serves as a **server-side data processing pipeline**.  
+It can ingest data from a variety of sources, transform it as needed, and send it to a target repository such as **Elasticsearch**.<sup>1</sup>
+
+Originally, Logstash was the primary data shipping engine within the Elastic Stack, handling both data collection and transformation.  
+However, due to its heavy resource usage, lighter options were later introduced to handle specific data collection tasks.
+
+---
+
+## Collecting Telemetry: Beats and Elastic Agent
+
+As the Elastic ecosystem evolved, **Beats** was introduced as a set of lightweight, single-purpose data shippers.  
+While Logstash sends data to a stash and can perform transformations, it consumes significant system resources.  
+**Beats**, on the other hand, is efficient and simply collects and forwards data.
+
+Each Beat focuses on a specific type of telemetry:
+
+- **Filebeat** – Ships log files  
+- **Winlogbeat** – Ships Windows Event Logs  
+- **Packetbeat** – Ships network data  
+- and many more for other types of data
+
+All Beats use the **libbeats** library, written in **Go**, to securely and reliably transmit data.
+
+With **Elastic Agent**, you can collect all forms of data from anywhere with a single unified agent per host —  
+one thing to install, configure, and scale.<sup>2</sup>
+
+---
+
+## Visualization: Kibana
+
+**Kibana** provides the user interface for the Elastic Stack.  
+It allows analysts to visualize, search, and interact with the data stored in Elasticsearch.  
+Through dashboards, charts, and query tools, Kibana makes it easy to identify patterns, monitor network activity,  
+and conduct investigations in **Security Onion**.
+
+---
+
+## Sources
+
+1. [https://www.elastic.co/logstash](https://www.elastic.co/logstash)  
+2. [https://docs.securityonion.net/en/2.4/elastic-agent.html](https://docs.securityonion.net/en/2.4/elastic-agent.html)
 
