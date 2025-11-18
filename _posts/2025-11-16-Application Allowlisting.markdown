@@ -141,7 +141,7 @@ Windows AppLocker can create custom rules for specific manufacturers to be allow
 For example:
 Take an organization that uses Slack. An application like Slack will often download its own updates and extract executables into user-writable directories, such as %LocalAppData%\Slack. By using AppLocker, you can create a Publisher rule for this specific vendor that allows executables signed by Slack's digital certificate and signature to execute, even from a user writable location. 
 
-But — test thoroughly. While Slack signs their executables, many vendors do not sign every DLL or component they ship.
+But, make sure you test thoroughly. While Slack signs their executables, many vendors do not sign every DLL or component they ship.
 
 **Conclusion**
 
