@@ -90,8 +90,9 @@ Another evasion technique relies on using what is already there on the system, L
 Tools like:
 - certutil.exe
 - rundll32.exe
+- installutil.exe
 
-can run payloads, download files, decode base64, load DLLs, etc.
+can run payloads, download files, decode base64, load DLLs, intall/uninstall, etc. 
 
 These tools are trusted, signed by Microsoft, and whitelisted by default. If an attacker gains initial access, they can bypass AV entirely by abusing what’s already on the system. 
 
