@@ -15,6 +15,7 @@ Modern command-and-control (C2) traffic likes to hide inside normal looking outb
 
 
 How do we gain network visibility:
+
 **NetFlow** - originally started as a Cisco-proprietary protocol for collecting statistics on network traffic. Focuses it's attention at the layer 3 and layer 4 of the OSI model.
 
 NetFlow provides metadata such as:
