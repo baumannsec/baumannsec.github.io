@@ -11,7 +11,7 @@ categories: Threat Hunting
 
 Egress traffic is one of the most valuable sources of security telemetry, yet it’s often ignored. The thinking is that encrypted outbound traffic is too difficult to analyze or too noisy to be useful. The reality, egress analysis fills in critical gaps left by endpoint security and helps detect threats that slip past EDR, AV, and signature-based defenses.
 
-Modern command-and-control (C2) traffic likes to hide inside normal looking outbound traffic, riding on top of legitimate services like CDNs, Gmail, or Salesforce. This means any  must understand the difference between normal human behavior and automated malware behavior, and they must combine endpoint visibility with network-level visibility.
+Modern command-and-control (C2) traffic likes to hide inside normal looking outbound traffic, riding on top of legitimate services like CDNs, Gmail, or Salesforce. This means cybersecurity professionals must understand the difference between normal human behavior and automated malware behavior, and they must combine endpoint visibility with network-level visibility.
 
 
 How do we gain network visibility:
@@ -26,9 +26,9 @@ NetFlow provides metadata such as:
 
 This enables profiling outbound behavior over time but it requires deep understanding of what “normal” looks like in your environment. NetFlow can be exported from routers or switches with very low overhead.
 
-**Zeek** - (formerly Bro) begins logging at the very first SYN packet. Generates separate log files of metadata of a full packet capture. 
+**Zeek** - (formerly Bro) begins logging at the very first SYN packet. Generates separate log files of metadata from a full packet capture. 
 
-Log files: 
+Log files include: 
 - conn.log
 - http.log
 - dns.log
