@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Egress Traffic Analysis with Rita"
+title:  "Egress Traffic Analysis with RITA"
 date:   2025-11-18 19:30:00 -0700
 categories: Threat Hunting
 ---
