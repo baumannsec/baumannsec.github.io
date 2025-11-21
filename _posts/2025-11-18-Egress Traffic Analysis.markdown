@@ -5,8 +5,6 @@ date:   2025-11-18 19:30:00 -0700
 categories: Threat Hunting
 ---
 
-# Egress Traffic
-
 ## Egress Traffic Control
 
 Egress traffic is one of the most valuable sources of security telemetry, yet it’s often ignored. The thinking is that encrypted outbound traffic is too difficult to analyze or too noisy to be useful. The reality, egress analysis fills in critical gaps left by endpoint security and helps detect threats that slip past EDR, AV, and signature-based defenses.
