@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Know Thy User Behavior"
-date:   2025-11-20 19:30:00 -0700
+date:   2025-11-19 19:30:00 -0700
 categories: Log analysis
 ---
 
